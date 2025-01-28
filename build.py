@@ -58,6 +58,11 @@ solution_template = Template(
 ---
 """)
 
+pdf_template = Template(
+"""
+<iframe src="{{ path }}" width="100%" height="600px"></iframe>
+
+""")
 
 
 def copy_if_changed(src_dir, dest_dir):
@@ -138,7 +143,6 @@ def process_notebook(path=BUILD_DIR):
 
 
 def build_markdown(path=BUILD_DIR, yaml_path=f"{BUILD_DIR}/_config.yml"):
-
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(searchpath="."),
         autoescape=False
@@ -172,6 +176,8 @@ def build():
                 process_notebook(os.path.join(root, file))
             elif file.endswith(".md"):
                 build_markdown(os.path.join(root, file))
+
+
 
 
 

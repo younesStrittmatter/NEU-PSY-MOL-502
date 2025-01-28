@@ -12,11 +12,6 @@ recommended way to use these notebooks is to open them in [Google Colab](https:/
 you will need a Google account. You can open the notebooks in Google Colab by clicking on the launch  button at the 
 top of the page. This will allow you to run the code without installing anything on your computer.
 
-## Content
-
-```{tableofcontents}
-:local:
-```
 
 ## Prerequisites
 
